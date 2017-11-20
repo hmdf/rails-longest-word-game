@@ -1,0 +1,9 @@
+<h1>Play#game</h1>
+<p>Here is your grid<%= @grid%></p>
+<form action="/score" method="get">
+<label for="question">What is your longest word </label>
+<input type="text" id="question" name="query" placeholder="word?">
+<input type="submit" value="Go on!">
+<input type="hidden" value="<%= @grid %>" name="grid">
+<input type="hidden" value="<%= Time.now.to_i %>" name="start_time">
+</form>
